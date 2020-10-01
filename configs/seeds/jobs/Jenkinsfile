@@ -1,0 +1,20 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Build A') { 
+            steps {
+                build 'a_workspace_build' 
+            }
+        }
+        stage('Build B') { 
+            steps {
+                build 'b_workspace_build'
+            }
+        }
+        stage('Build C') { 
+            steps {
+                build 'c_workspace_build'
+            }
+        }
+    }
+}
